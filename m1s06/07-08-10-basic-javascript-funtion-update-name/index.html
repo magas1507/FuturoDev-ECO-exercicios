@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Style</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-......"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Meu Site</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Página Inicial</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="profile">
+        <h2>Perfil do Usuário</h2>
+        <div class="img-profile">
+          <img
+            src="./assets/foto.png"
+            width="300"
+            height="280"
+            alt="Foto do Perfil"
+          />
+        </div>
+        <div class="inf-profile">
+          <h3 id="userName">Nome: Ma Gabriela Salvatierra</h3>
+          <button onclick="updateName()">Atualizar Nome de Usuário</button>
+          <h5>
+            Descrição: Desenvolvedora Frontend com formação em Ciência da
+            Computação com mais de 2 anos de experiência. Focado em React,
+            Typescript e interessada em projetos escaláveis ​​onde possa
+            participar de todo o ciclo de desenvolvimento com metodologias ágeis
+            como Scrum. Gosto de fornecer soluções eficientes e estou disposta a
+            enfrentar novos projetos com entusiasmo.
+          </h5>
+        </div>
+      </section>
+      <section>
+        <h2>Experiência</h2>
+        <div class="contentExp">
+          <h4>JavaScript Developer</h4>
+          <h5>Plooral</h5>
+          <p>
+            Elaboração de códigos escalavél e facil de manter, a avaliação dos
+            processos já em funcionamento para aprimoramento e a adição de novas
+            capacidades, permitindo a reprodução de funcionalidades em diversos
+            ambientes, como na web e dispositivos móviles. Tecnologias
+            envolvidas incluem AngularJS, React Native, Node.js, Sequelize,
+            PostgreSQL e GIT. trabalhei com uma equipe de 4 pessoas o que me
+            permitiu desenvolver a minha comunicação e acima de tudo o trabalho
+            em equipe
+          </p>
+        </div>
+        <div class="contentExp">
+          <h4>Desenvolvedor Front-End jr</h4>
+          <h5>Avanti Tecnologia & Marketing</h5>
+          <p>
+            Manutenção, criação e suporte de funcionalidades nas diferentes
+            ecommerce. Tecnologia: E-commerce VTEX, Jquery, Html5, CSS3, SASS
+          </p>
+        </div>
+      </section>
+
+      <section class="contact">
+        <h2 >Contacto</h2>
+        <ul>
+          <li><i class="fas fa-envelope"></i>Email: asmg15.07@egmail.com</li>
+          <li><i class="fas fa-phone"></i> Telefone: (48) 99164-1980</li>
+          <li>
+            Linkedin:<a
+              href="www.linkedin.com/in/maria-gabriela-acosta-salvatierra-583102133"
+              >Gabriela Acosta</a
+            >
+          </li>
+          <li>
+            GitHub:<a
+              href="https://github.com/magas1507"
+              >magas1507</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

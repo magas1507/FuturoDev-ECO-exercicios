@@ -7,7 +7,6 @@ function updateName() {
   let newUserName = prompt("Digite o novo nome de usuário:");
   console.log(newUserName)
   if (newUserName) {
-   
       let userNameElement = document.getElementById("userName");
       userNameElement.textContent = "Nome: " + newUserName;
     
