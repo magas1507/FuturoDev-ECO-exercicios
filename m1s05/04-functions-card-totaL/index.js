@@ -28,7 +28,19 @@ function comprarProduto() {
 	}
 	
 }
-                                                                                                                                                                                                                                                                                                                                                                                                                                           
+function calcularTotal() {
+	let total = 0;
+	carrinho.forEach(function(produto) {
+			total += produto.preco;
+	});
+	
+	if (total > 0) {
+			document.getElementById('valorTotal').textContent = 'Valor Total do Carrinho: R$ ' + total.toFixed(2);
+	} else {
+			document.getElementById('valorTotal').textContent = 'Carrinho vazio';
+	}
+}
+
 function simularConsultaPreco(produto) {
 	
 	let precos = {
