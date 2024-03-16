@@ -47,8 +47,14 @@ button {
 }
 #valorTotal{
   font-weight: 800;
+  color:red;
 }
 #listaCarrinho{
   list-style: none;
   font-weight: 600;
+  color: cadetblue;
+}
+
+#qtdProdutos{
+  font-weight: 700;
 }

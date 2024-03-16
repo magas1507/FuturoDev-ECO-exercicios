@@ -1,4 +1,5 @@
 let carrinho = [];
+
 function consultarProduto() {
 	let input = document.getElementById("produtoInput");
 	let produto = input.value.trim();
@@ -25,6 +26,7 @@ function comprarProduto() {
 			alert('Produto adicionado ao carrinho: ' + produto);
 		
 			mostrarCarrinho();
+			atualizarQtdProdutos();
 	} else {
 			alert('Produto não encontrado. Não foi possível adicionar ao carrinho.');
 	}
@@ -43,18 +45,18 @@ function calcularTotal() {
 	}
 }
 function mostrarCarrinho() {
-	var listaCarrinho = document.getElementById('listaCarrinho');
-	listaCarrinho.innerHTML = ''; 
-	
+	let listaCarrinho = document.getElementById('listaCarrinho');
+	listaCarrinho.innerHTML = '';
+
 	carrinho.forEach(function(produto) {
-			var itemLista = document.createElement('li');
+			let itemLista = document.createElement('li');
 			itemLista.textContent = produto.nome + ' - R$ ' + produto.preco.toFixed(2);
 			listaCarrinho.appendChild(itemLista);
 	});
 }
 
 function calcularTotalCarrinho() {
-	var total = 0;
+	let total = 0;
 	carrinho.forEach(function(produto) {
 			total += produto.preco;
 	});
@@ -62,13 +64,20 @@ function calcularTotalCarrinho() {
 }
 
 function exibirTotalCarrinho() {
-	var valorTotal = calcularTotalCarrinho();
-	var valorTotalElement = document.getElementById('valorTotal');
+	let valorTotal = calcularTotalCarrinho();
+	let valorTotalElement = document.getElementById('valorTotal');
+	
 	if (valorTotal > 0) {
-			valorTotalElement.textContent = 'Valor Total do Carrinho: R$ ' + valorTotal.toFixed(2);
+		valorTotalElement.textContent = 'Valor Total do Carrinho: R$ ' + valorTotal.toFixed(2);
 	} else {
-			valorTotalElement.textContent = 'Carrinho vazio.';
+		valorTotalElement.textContent = 'Carrinho vazio.';
 	}
+}
+
+function atualizarQtdProdutos() {
+	let qtdProdutosElement = document.getElementById('qtdProdutos');
+	
+	qtdProdutosElement.textContent = 'Quantidade de Produtos: ' + carrinho.length;
 }
 
 function simularConsultaPreco(produto) {
