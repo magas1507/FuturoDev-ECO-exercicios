@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>localStorage</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1>Consulta e Compra de Produtos</h1>
+    
+    <div class='content-product'>
+      <label for="produtoInput">Código ou Nome do Produto:</label>
+      <input type="text" id="produtoInput" placeholder="Digite o código ou nome do produto">
+      <button onclick="consultarProduto()">Consultar Valor</button>
+      <button onclick="comprarProduto()">Comprar Produto</button>
+      <button id="calcularTotalBtn" onclick="calcularTotal()">Calcular Total</button>
+
+    </div>
+     
+    <div id="resultado"></div>
+    <ul id="listaCarrinho"></ul>
+    <p id="qtdProdutos"></p>
+    <p id="valorTotal"></p>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

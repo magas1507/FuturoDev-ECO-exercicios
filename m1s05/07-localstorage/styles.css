@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.content-product {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.content-product label{
+  font-weight: 600;
+}
+.content-product input {
+  background-color: hsl(195, 18%, 87%);
+  border: none;
+  border-radius: 5px;
+  color: black;
+  margin-left: 10px;
+  font-weight: 600;
+  padding: 1%;
+  margin-right: 10px;
+}
+
+button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border: transparent;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+#resultado{
+  display: flex;
+  margin-top: 10px;
+  font-weight: 600;
+}
+#valorTotal{
+  font-weight: 800;
+  color:red;
+}
+#listaCarrinho{
+  list-style: none;
+  font-weight: 600;
+  color: cadetblue;
+}
+
+#qtdProdutos{
+  font-weight: 700;
+}

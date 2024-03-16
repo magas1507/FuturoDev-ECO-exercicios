@@ -1,0 +1,114 @@
+let carrinho = [];
+if (typeof localStorage !== 'undefined') {
+	if (localStorage.getItem('carrinho')) {
+		carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+		mostrarCarrinho(); 
+		exibirTotalCarrinho(); 
+	}
+} else {
+	console.log('O localStorage não está disponível neste navegador.');
+}
+
+function consultarProduto() {
+	let input = document.getElementById("produtoInput");
+	let produto = input.value.trim();
+	let preco = simularConsultaPreco(produto);
+	
+	if (preco !== null) {
+
+		document.getElementById('resultado').innerText = 'O valor do produto é: R$ ' + preco.toFixed(2);
+	} else {
+
+		document.getElementById('resultado').innerText = 'Produto não encontrado. Por favor, verifique o código ou nome.';
+	}
+}
+
+function comprarProduto() {
+
+	let input = document.getElementById("produtoInput");
+	let produto = input.value.trim();
+	
+	let preco = simularConsultaPreco(produto);
+	
+	if (preco !== null) {
+			carrinho.push({ nome: produto, preco: preco });
+			alert('Produto adicionado ao carrinho: ' + produto);
+
+			atualizarLocalStorage();
+			mostrarCarrinho()			
+			atualizarQtdProdutos();
+	} else {
+			alert('Produto não encontrado. Não foi possível adicionar ao carrinho.');
+	}
+	
+}
+function calcularTotal() {
+	let total = 0;
+	carrinho.forEach(function(produto) {
+			total += produto.preco;
+	});
+	
+	if (total > 0) {
+			document.getElementById('valorTotal').textContent = 'Valor Total do Carrinho: R$ ' + total.toFixed(2);
+	} else {
+			document.getElementById('valorTotal').textContent = 'Carrinho vazio';
+	}
+}
+function mostrarCarrinho() {
+	let listaCarrinho = document.getElementById('listaCarrinho');
+	listaCarrinho.innerHTML = '';
+	 
+	carrinho.forEach(function(produto) {
+			let itemLista = document.createElement('li');
+			itemLista.textContent = produto.nome + ' - R$ ' + produto.preco.toFixed(2);
+			listaCarrinho.appendChild(itemLista);
+	});
+}
+
+function calcularTotalCarrinho() {
+	let total = 0;
+	carrinho.forEach(function(produto) {
+			total += produto.preco;
+	});
+	return total;
+}
+
+function exibirTotalCarrinho() {
+	let valorTotal = calcularTotalCarrinho();
+	let valorTotalElement = document.getElementById('valorTotal');
+	
+	if (valorTotal > 0) {
+		valorTotalElement.textContent = 'Valor Total do Carrinho: R$ ' + valorTotal.toFixed(2);
+	} else {
+		valorTotalElement.textContent = 'Carrinho vazio.';
+	}
+}
+
+function atualizarQtdProdutos() {
+	let qtdProdutosElement = document.getElementById('qtdProdutos');
+	
+	qtdProdutosElement.textContent = 'Quantidade de Produtos: ' + carrinho.length;
+}
+
+function atualizarLocalStorage() {
+	localStorage.setItem('carrinho', JSON.stringify(carrinho));
+}
+
+function simularConsultaPreco(produto) {
+	
+	let precos = {
+		"arroz": 10.50,
+		"feijão": 8.00,
+		"macarrão": 5.75,
+		"atum": 19.79,
+		"banana": 9.79,
+		"peixe": 49.79,
+		"carne": 29.79,
+		"morangos": 9.79,
+		
+	};
+	
+	return precos[produto.toLowerCase()] || null;
+}
+
+
