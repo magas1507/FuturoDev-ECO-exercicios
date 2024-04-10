@@ -1,0 +1,35 @@
+[
+  {
+      "nomeTrilha": "Gravatá",
+      "cidade":"Florianópolis",
+      "estado":"SC",
+      "duracao": 180,
+      "trajeto": 4,
+      "dificuldade":"Iniciante",
+      "tipo":"caminhada / trekking",
+      "nomeUsuario":"Gabriela Acosta",
+      "urlImagem":"https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+      "nomeTrilha": "Trilha Lagoinha do Leste",
+      "cidade":"Florianópolis",
+      "estado":"SC",
+      "duracao": 240,
+      "trajeto": 15,
+      "dificuldade":"intermedio",
+      "tipo":"caminhada / trekking",
+      "nomeUsuario":"Gabriela Acosta",
+      "urlImagem":"https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+      "nomeTrilha": "Trilha da Boa Vista - Mole - Galheta - Barra da Lagoa",
+      "cidade":"Florianópolis",
+      "estado":"SC",
+      "duracao": 240,
+      "trajeto": 15,
+      "dificuldade":"Iniciante",
+      "tipo":"caminhada / trekking",
+      "nomeUsuario":"Gabriela Acosta",
+      "urlImagem":"https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  }
+]
