@@ -10,7 +10,7 @@ function useFetch(url) {
     setData(value);
    })
    .catch((err) => {
-    window.alert("Ocorreu um erro no Banco de dados");
+    window.alert("Ocorreu um erro ");
     console.error(err);
    })
  }, [url]);
