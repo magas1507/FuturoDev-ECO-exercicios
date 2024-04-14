@@ -1,0 +1,25 @@
+.card_container {
+  display: flex;
+  align-content: center;
+  
+  box-shadow: .2em .2em .8em black;
+  height: 16em;
+  padding: 15px;
+  gap: 10px;
+}
+
+.card_colum1{
+  display: flex;
+}
+.card_imagem {
+  background-position: center;
+  height: 16em;
+}
+
+.card_colum2{
+  margin-top: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  line-height: normal;  
+}
