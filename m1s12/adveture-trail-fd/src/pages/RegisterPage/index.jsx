@@ -1,6 +1,6 @@
 function Registre() {
   return(
-    <div>Registre</div>
+    <div>Criando Registre</div>
   )
 }                      
 
