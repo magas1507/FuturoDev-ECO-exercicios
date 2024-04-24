@@ -1,7 +1,8 @@
-function Registre() {
+
+function RegisterPage() {
   return(
-    <div>Criando Registre</div>
+    <div> Criando List Page</div>
   )
 }                      
 
-export default Registre;
+export default RegisterPage;

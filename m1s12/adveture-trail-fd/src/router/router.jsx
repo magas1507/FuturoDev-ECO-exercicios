@@ -1,30 +1,34 @@
 import { createBrowserRouter } from 'react-router-dom'
-import HomePage from '../pages/HomePage/index.jsx'
-import ListPage from '../pages/ListPage/index.jsx'
-import RegisterPage from '../pages/RegisterPage/index.jsx'
 import App from "../App.jsx";
+
+import HomePage from '../pages/HomePage/index.jsx'
+import RegisterPage from '../pages/RegisterPage/index.jsx'
+import ExplorerPage from '../pages/ExplorerPage/index.jsx'
+
 
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <App />,
+        errorElement: <div>Error Paage </div>,
         children: [
             {
                 path: '/',
-                element: <HomePage />,
+                element: <HomePage/>,
             },
             {
-                path: 'cadastro',
+                path: '/register-page',
                 element: <RegisterPage />,
             },
             {
-                path: 'lista',
-                element: <ListPage />,
+                path: '/explorer-page',
+                element: <ExplorerPage />,
             },
         ]
 
     }
 ]);
+
 
 export default router;

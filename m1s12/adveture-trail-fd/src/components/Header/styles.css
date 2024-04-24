@@ -10,8 +10,15 @@ header {
   padding: 0 84px;
 }
 
+.logo a{
+  color: white;
+}
 ul{
   display: flex;  
   gap: 40px;
 
+}
+
+.li-container a{
+  color: white;
 }
