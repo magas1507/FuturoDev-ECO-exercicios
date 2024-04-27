@@ -2,11 +2,10 @@
   display: flex;
   align-content: center;
   box-shadow: .2em .2em .8em black;
-  height: 16em;
-  
-  padding: 15px 0;
   gap: 10px;
-  margin-left: 40px;
+  margin-bottom: 40px;
+  width: 960px;
+  font-family: "Inter", sans-serif;
 }
 
 .card_colum1{
@@ -18,9 +17,67 @@
 }
 
 .card_colum2{
-  margin-top: 1px;
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: start;
-  line-height: normal;  
+  line-height: normal;
+}
+
+.card-colum2--head{
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+
+}
+.card-colum2--head h1{
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 700;
+}
+.card-colum2--head img{
+  display: flex;
+  width: 33px;
+  height: 23px;
+}
+hr{
+  width: 40px;
+  height: 1px;
+  border: none;   
+  background-color: #ccc;  
+}
+
+h3{
+  display: flex;
+  align-self:last baseline;
+  margin-right: 5%;  
+}
+
+.card-colum2--main h5{
+  color: #5c6670;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  gap: 15px;
+}
+
+span{
+  width: 13%;
+  height: 24px;
+  border-radius: 32px;
+  padding: 2px 8px 2px 8px;
+  background-color: #eff3f7;
+  color: black;
+  margin-top: 5%;
+  font-weight: 700;
+}
+
+.rating{
+  display: flex;
+  align-items: center;
+}
+
+.rating a{
+  color: black;
+  
 }
