@@ -53,6 +53,7 @@ button {
 }
 
 .button--go-back{
+  align-items: center;
   background-color: #fff;
   border: 2px solid #504908;
   color: #504908;
