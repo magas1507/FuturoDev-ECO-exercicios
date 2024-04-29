@@ -1,0 +1,60 @@
+.container {
+  width: 492px;
+  margin: 50px auto;
+  margin-top: 10%;
+  font-family: "inter";
+}
+
+h1{
+  font-weight: 600;
+  font-size: 2em;
+  line-height: 1.8em;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group--grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 6,9em;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #504908;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 2%;
+}
+
+.form-group--buttons{
+  display: flex;
+  
+}
+
+.button--go-back{
+  background-color: #fff;
+  border: 2px solid #504908;
+  color: #504908;
+  text-decoration: none; 
+}
