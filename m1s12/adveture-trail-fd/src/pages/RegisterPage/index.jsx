@@ -2,6 +2,8 @@ import "./styles.css";
 
 import { Link } from "react-router-dom";
 import { useForm } from 'react-hook-form';
+import { TrilhasContext } from "../../context/TrilhasContext";
+import { useContext } from "react";
 
 const RegisterPage = () => {
   const {
@@ -10,15 +12,22 @@ const RegisterPage = () => {
     control,
     formState: { errors }
    } = useForm();
-   
-   
 
+   const { addTrail } = useContext(TrilhasContext);
+
+   function sendForm(handleSubmit) {
+    console.log(handleSubmit);
+    addTrail({
+      ...handleSubmit,
+      duracao: Number(handleSubmit.duracao),
+      trajeto: Number(handleSubmit.trajeto),
+    });
+  }
    
-    
   return (
     <div className="container">
       <h1>Cadastro de Nova Trilha</h1>
-      <form >
+      <form onSubmit={handleSubmit(sendForm)}>
         <div className="form-group">
           <label htmlFor="nome-trilha">Nome da Trilha:</label>
           <input 
